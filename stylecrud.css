@@ -1,0 +1,113 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background: #fff;
+    color: #111;
+    font-family: system-ui;
+}
+.crud{
+    width: 80%;
+    margin: auto;
+}
+.head{
+    text-align: center;
+    text-transform: capitalize;
+    margin: 10px 0;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+   
+    font-size: large;
+   
+}
+.head h2{
+    text-shadow: 1px 1px #70bafe ;
+    background: linear-gradient(to right, #70bafe 0%, #998dff 51%, #70bafe 100%);
+    -webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+.head p{
+   background: linear-gradient(to right, #70bafe 0%, #998dff 51%, #70bafe 100%);
+    text-shadow: 1px 1px #70bafe ;
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+input{
+    width: 100%;
+    height: 30px;
+    outline: none;
+   border-left: none;
+   border-top: none;
+   border-right: none;
+    border-color: #70bafe;
+    background: #fff;
+    margin: 4px 0;
+    border-radius: 4px;
+    padding: 4px;
+    color: #111;
+
+    
+}
+input:focus{
+    background: #fff;
+    box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.2);
+    transform: scale(1.1);
+}
+.price input{
+    width: 20%;
+}
+#total{
+    background:#fff;
+    border-radius: 4px;
+    padding: 5px 2px;
+
+}
+#total::before{
+    content: 'Total: ';
+    color: #fff;
+    padding: 5px;
+
+}
+button{
+    width: 100%;
+    height: 30px;
+    border: none;
+    cursor: pointer;
+    background: linear-gradient(to right, #70bafe 0%, #998dff 51%, #70bafe 100%);
+
+   color: #fff;
+   border-radius: 20px;
+   transition: 0.5s;
+}
+button:hover{
+    box-shadow:  2px 2px 2px 2px rgba(0, 0, 0, 0.2);
+    letter-spacing: 1px;
+    
+}
+.btnSearch{
+    display: flex;
+    justify-content: space-between;
+}
+.btnSearch button{
+    width: 45%;
+
+}
+table{
+    width: 100%;
+    margin: 10px 0;
+    text-align: center;
+
+}
+table th{
+    text-transform: capitalize;
+}
+th ,td{
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  color: darkslategrey;
+ 
+padding: 5px;
+}
+#deleteAll{
+    margin: 20px 0;
+
+}
