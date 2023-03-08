@@ -30,9 +30,10 @@ function gettotal(){
 }
 
 //create product
+let datapro;
 if(localStorage.product !=null){
     datapro = JSON.parse( localStorage.product);
-}else{let datapro = [];}
+}else{ datapro = [];}
 
 submit.onclick = function(){
     let newpro = {
@@ -61,12 +62,14 @@ submit.onclick = function(){
                 mood='create';
                 submit.innerHTML='Create';
                 count.style.display='block';
+               
             }
             //save localStorage
             localStorage.setItem('product',JSON.stringify(datapro));
             console.log(datapro);
             
             showdata();
+            cleardata();
     }
     
     
@@ -88,7 +91,7 @@ category.value='';
 function showdata(){
     gettotal();
    let table='';
-   for(let i=0;i<datapro.length;i++){
+   for(let i=0; i < datapro.length ; i++){
     table +=`<tr>
     <td>${i+1}</td>
     <td>${datapro[i].title}</td>
@@ -113,8 +116,8 @@ function showdata(){
    btnDelete.innerHTML='';
    }
 }
-showdata();
 
+showdata();
 //count
 
 //delete
@@ -166,7 +169,7 @@ function getsearchMood(id){
 }
 function SearchData(value){
     let table = '';
-    for(let i=0; i<datapro.length;i++){
+    for(let i=0; i< datapro.length ;i++){
        if(searchMood == 'title'){
       
         if(datapro[i].title.includes(value.toLowerCase())){
